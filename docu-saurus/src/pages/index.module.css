@@ -1,0 +1,167 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #326ce5 0%, #fc6d26 100%, #222 120%);
+  background-size: 200% 200%;
+  animation: gradientBG 8s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.glassCard {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 32px;
+  box-shadow: 0 16px 48px 0 rgba(50, 108, 229, 0.25), 0 2px 8px 0 rgba(252, 109, 38, 0.10), 0 0 32px 0 rgba(252,109,38,0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  color: #fff;
+  animation: fadeIn 1.2s cubic-bezier(.42,0,.58,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.titleGradient {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #326ce5 10%, #fc6d26 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.accent {
+  color: #fc6d26;
+  font-weight: bold;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logoIcon {
+  height: 60px;
+  filter: drop-shadow(0 2px 8px #326ce5aa);
+  transition: transform 0.2s;
+}
+.logoIcon:hover {
+  transform: scale(1.12) rotate(-8deg);
+  filter: drop-shadow(0 4px 16px #fc6d26aa);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.buttonMain {
+  background: linear-gradient(90deg, #326ce5 0%, #fc6d26 100%);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 220px;
+  text-align: center;
+}
+.buttonMain:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 24px rgba(50,108,229,0.25);
+}
+
+.buttonBlog {
+  background: #fff;
+  color: #326ce5;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 120px;
+  text-align: center;
+}
+.buttonBlog:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 24px rgba(50,108,229,0.15);
+  color: #fc6d26;
+}
+
+.bottomLogos {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem; /* más espacio entre logos */
+}
+
+.bottomLogoIcon {
+  height: 36px;
+  filter: drop-shadow(0 2px 8px #326ce5aa);
+  transition: transform 0.2s;
+}
+.bottomLogoIcon:hover {
+  transform: scale(1.15) rotate(8deg);
+  filter: drop-shadow(0 4px 16px #fc6d26aa);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  .glassCard {
+    padding: 2rem 1rem;
+    max-width: 98vw;
+  }
+  .titleGradient {
+    font-size: 2rem;
+  }
+  .logoIcon {
+    height: 40px;
+  }
+}
