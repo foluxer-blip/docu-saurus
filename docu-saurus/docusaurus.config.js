@@ -7,6 +7,21 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import { FaGithub, FaDiscord, FaTwitter } from 'react-icons/fa';
 
+module.exports = {
+  // Tu nombre de usuario y el repositorio
+  url: 'https://foluxer-blip.github.io',
+  baseUrl: '/docu-saurus/',
+
+  // Ejemplo:
+  // url: 'https://midudev.github.io',
+  // baseUrl: '/mi-documentacion/',
+
+  // Otros valores útiles
+  organizationName: 'foluxer-blip', // GitHub user/org
+  projectName: 'docu-saurus', // nombre del repositorio
+  deploymentBranch: 'gh-pages', // rama donde se hará el deploy
+};
+
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
